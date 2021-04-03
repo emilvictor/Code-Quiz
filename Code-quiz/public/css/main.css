@@ -21,7 +21,6 @@ body {
 ul {
     list-style: none;
     padding: 0rem;
-    margin-left: -8rem;
 }
 
 h1,
@@ -71,25 +70,36 @@ button {
     font-size: 18px;
     font-weight: 300;
     color: white;
-    background: #0a0a0a;
-
+    background: linear-gradient(180deg, #212121 0%, #0a0a0a 96.51%);
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 2.5px;
 }
+button:hover {
+    color: #242424;
+    background: linear-gradient(180deg, #ffffff 0%, #f0e9d0 96.51%);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+}
 /* Quiz buttons  */
 .btn-quiz {
-    width: 8rem;
+    width: 10rem;
     background: #15151500;
-    border: none;
-
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 0;
     /* box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5); */
     box-shadow: none;
     font-size: 32px;
     text-align: left;
+    text-indent: 1rem;
     font-weight: 300;
     color: #252525;
     font-family: "Playfair-Display";
+}
+.btn-quiz:hover {
+    font-size: 36px;
+    background: none;
+    box-shadow: none;
 }
 
 .logout-history-box {
@@ -124,4 +134,10 @@ footer {
     width: 90%;
     height: 1px;
     background-color: #242424;
+}
+
+@media screen and (min-width: 600) {
+    body {
+        width: 600;
+    }
 }
