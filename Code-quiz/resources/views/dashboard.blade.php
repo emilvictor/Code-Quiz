@@ -26,6 +26,7 @@
 <div class="logout-history-box">
 
     <form action="/history" class="form-history">
+        @csrf
         <button type="submit">view history</button>
     </form>
     <form action="/logout" class="form-logout">

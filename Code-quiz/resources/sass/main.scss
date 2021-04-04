@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    color: rgb(24, 24, 24);
+}
+body {
+    background: linear-gradient(179.98deg, #fffbed 0.01%, #ffffff 158.29%);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Various */
+
+ul {
+    list-style: none;
+    padding: 0rem;
+}
+
+h1,
+h3 {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 98.8%;
+    width: 80%;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.86);
+}
+h3 {
+    font-size: 48px;
+}
+
+/* Forms */
+form {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: auto;
+    width: 80%;
+}
+.login-form {
+    height: 250px;
+}
+
+input {
+    height: 3rem;
+    width: 12rem;
+    border-radius: 2.5px;
+    border: none;
+    text-indent: 1rem;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    color: black;
+}
+label {
+    text-indent: 0.5rem;
+}
+
+button {
+    width: 10rem;
+    margin-top: 1rem;
+    height: 2.5rem;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    background: linear-gradient(180deg, #212121 0%, #0a0a0a 96.51%);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 2.5px;
+}
+button:hover {
+    color: #242424;
+    background: linear-gradient(180deg, #ffffff 0%, #f0e9d0 96.51%);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+}
+/* Quiz buttons  */
+.btn-quiz {
+    width: 10rem;
+    background: #15151500;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 0;
+    /* box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5); */
+    box-shadow: none;
+    font-size: 32px;
+    text-align: left;
+    text-indent: 1rem;
+    font-weight: 300;
+    color: #252525;
+    font-family: "Playfair-Display";
+}
+.btn-quiz:hover {
+    font-size: 36px;
+    background: none;
+    box-shadow: none;
+}
+
+.logout-history-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+
+    height: 20%;
+    width: 100%;
+}
+.form-history,
+.form-logout {
+    align-items: center;
+}
+
+/* Register */
+/* // */
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.footer-line {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 1px;
+    background-color: #242424;
+}
+
+@media screen and (min-width: 600) {
+    body {
+        width: 600;
+    }
+}
