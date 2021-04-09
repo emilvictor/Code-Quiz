@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePhpQuizzesTable extends Migration
+class CreatePhpQuizTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class CreatePhpQuizzesTable extends Migration
      */
     public function up()
     {
-        Schema::create('php_quizzes', function (Blueprint $table) {
-            $table->id();
+        Schema::create('php_quiz', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('question');
+            $table->string('first_incorrect_answer');
+            $table->string('second_incorrect_answer');
+            $table->string('correct_answer');
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class CreatePhpQuizzesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('php_quizzes');
+        Schema::dropIfExists('php_quiz');
     }
 }

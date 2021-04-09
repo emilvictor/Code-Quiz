@@ -6,10 +6,10 @@
 
 
 <ul>
-    <li><form action="/php_quiz">
+    <li><form action="/php-quiz">
         <button type="submit" class="btn-quiz php">> php</button>
     </form></li>
-    <li><form action="/js_quiz">
+    <li><form action="quiz/javascript">
         <button type="submit" class="btn-quiz js">> js</button>
     </form></li>
     <li><form action="/laravel_quiz">
