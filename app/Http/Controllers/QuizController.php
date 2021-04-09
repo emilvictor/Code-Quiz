@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\PhpQuiz;
 
-class PhpQuizController extends Controller
+use Illuminate\Http\Request;
+// use Illuminate\Support\Collection;
+
+use App\Quiz;
+
+class QuizController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +18,10 @@ class PhpQuizController extends Controller
     public function index()
     {
         //
-        $quiz = PhpQuiz::all();
+        $quiz = Quiz::all();
 
-        return view('php-quiz')->with('quiz', $quiz);
+
+        return view('test')->with('quiz', $quiz);
     }
 
     /**
@@ -39,7 +43,6 @@ class PhpQuizController extends Controller
     public function store(Request $request)
     {
         //
-        dd($request('test1'));
     }
 
     /**
@@ -48,11 +51,13 @@ class PhpQuizController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, $number)
     {
         //
-        $quiz = PhpQuiz::all();
-        return view('quiz', ['id' => $id])->with('quiz', $quiz);
+        $quizzes = Quiz::all();
+        // $data= User::whereIn('id', [10, 15, 18])->get();
+        // $quiz = $quizzes->$id;
+        return view('quiz', ['id' => $id])->with('quiz', $quizzes)->with('number', $number);
     }
 
     /**

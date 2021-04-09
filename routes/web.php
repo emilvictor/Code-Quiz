@@ -5,6 +5,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\QuizController;
+use Whoops\Run;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,8 +27,7 @@ Route::get('logout', LogoutController::class);
 Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::post('register', RegisterController::class);
 Route::view('/register', 'authentication/register');
-// Route::get('php_quiz', PhpQuizController::class);
 
-
-
-// vanligt a href=view
+Route::resource('test', QuizController::class);
+Route::get('quiz/{id}/{number}', 'App\Http\Controllers\QuizController@show');
+// Route::post('/result', 'PhpQuizController@store');

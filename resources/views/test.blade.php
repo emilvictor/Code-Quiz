@@ -1,14 +1,25 @@
 @extends('/layouts/app')
 
-{{-- hämta id --}}
-{{-- hämta quiz --}}
-{{-- låta user svara på frågan, i form --}}
-{{-- stora svaret i $_SESSION --}}
-{{-- byta sida när user svarat --}}
+@php
 
-{{-- Declare variable for next question redirect --}}
+//  $quiz[1]['questions'][0]['question']
+//  return the question
 
-<h1>{{ $id }}</h1>
+@endphp
+
+{{
+    $quiz[1]['questions'][0]['question']
+}}
+
+{{-- @foreach ($quiz as $items)
+
+{{
+    var_dump($items['questions'])
+}}
+
+@endforeach --}}
+
+
 
 @if ($id ==='result')
 {{-- {{ 'Display quiz result'}} --}}
@@ -16,7 +27,7 @@
 
 @else
 
-<form action="result"  method="post" >
+<form action="/result"  method="post" >
     @csrf
 @foreach ($quiz as $question)
 
