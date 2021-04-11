@@ -11,10 +11,7 @@ class Quiz
 {
     public static function all(): object
     {
-
-
         $quiz = (object) [
-
 
             'javascript' =>
             [
@@ -26,6 +23,18 @@ class Quiz
                     [
                         'id' => 2,
                         'question' => 'is this the SECOND javascript q?',
+                    ],
+                    [
+                        'id' => 3,
+                        'question' => 'is this the THIRD javascript q?',
+                    ],
+                    [
+                        'id' => 4,
+                        'question' => 'is this the FOURTH javascript q?',
+                    ],
+                    [
+                        'id' => 5,
+                        'question' => 'is this the FIFTH AND LAST javascript q?',
                     ]
                 ],
                 'answers' => [
@@ -39,8 +48,37 @@ class Quiz
                     ],
                     [
                         'id' => 2,
-                        'question' => 'is this the SECOND javascript q?',
-                    ]
+                        'answer' => [
+                            ['yes' => true],
+                            ['maybe' => false],
+                            ['no' => false],
+                        ]
+                    ],
+                    [
+                        'id' => 3,
+                        'answer' => [
+                            ['yes' => true],
+                            ['maybe' => false],
+                            ['no' => false],
+                        ]
+                    ],
+                    [
+                        'id' => 4,
+                        'answer' => [
+                            ['yes' => true],
+                            ['HAHAHAHA' => false],
+                            ['no' => false],
+                        ]
+                    ],
+                    [
+                        'id' => 5,
+                        'answer' => [
+                            ['yes' => true],
+                            ['maybe' => false],
+                            ['no' => false],
+                        ]
+                    ],
+
                 ]
             ],
             'php' =>

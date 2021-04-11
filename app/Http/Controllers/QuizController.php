@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
-// use Illuminate\Support\Collection;
+use Illuminate\Support\Collection;
 
 use App\Quiz;
 
@@ -43,6 +43,11 @@ class QuizController extends Controller
     public function store(Request $request)
     {
         //
+
+
+
+
+        return view('/')->with($request);
     }
 
     /**
@@ -51,13 +56,12 @@ class QuizController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id, $number)
+    public function show(Request $request, $id)
     {
         //
-        $quizzes = Quiz::all();
-        // $data= User::whereIn('id', [10, 15, 18])->get();
-        // $quiz = $quizzes->$id;
-        return view('quiz', ['id' => $id])->with('quiz', $quizzes)->with('number', $number);
+        $request = Quiz::all();
+        $quiz = $request->$id;
+        return view('quiz', ['id' => $id])->with('quiz', $quiz);
     }
 
     /**

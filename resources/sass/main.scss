@@ -51,8 +51,8 @@ form {
 }
 
 input {
-    height: 3rem;
-    width: 12rem;
+    height: 1rem;
+    width: 2rem;
     border-radius: 2.5px;
     border: none;
     text-indent: 1rem;
@@ -142,4 +142,9 @@ footer {
     body {
         width: 600;
     }
+}
+
+.answer-box-grid {
+    display: grid;
+    grid-template-columns: 80% 20%;
 }

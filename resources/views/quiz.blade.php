@@ -1,62 +1,67 @@
 @extends('/layouts/app')
-
-{{-- hämta id --}}
-{{-- hämta quiz --}}
-{{-- låta user svara på frågan, i form --}}
-{{-- stora svaret i $_SESSION --}}
-{{-- byta sida när user svarat --}}
-
-{{-- Declare variable for next question redirect --}}
-
-<h1>{{ $number }}</h1>
-
 @php
+    $questions = array();
 
-// Current quiz on /quiz/id
-$currentQuiz = $quiz->$id;
+    @endphp
+    @foreach ($quiz['questions'] as $question)
+    @php
+        array_push($questions, $question)
+    @endphp
 
+    @endforeach
+
+
+<h1>
+{{$id}}
+</h1>
+
+
+
+
+<form action="result" method="post">
+@csrf
+@foreach ($questions as $question)
+
+<div class="form-grid">
+    {{$question['id']}}
+    <div class="question">
+        {{$question['question']}}
+    </div>
+    <div class="answers">
+
+
+ @php
+     $questionId = $question['id'];
+
+ @endphp
+
+@foreach ($quiz['answers'] as $answers)
+
+@if ($answers['id'] === $questionId)
+@php
+$number = (string)$answers['id'];
+$inputId = 'question' . $number;
+$keys = array();
+array_push($keys, key($answers['answer'][0]), key($answers['answer'][1]), key($answers['answer'][2]));
 @endphp
 
 
-
-@foreach ($currentQuiz['questions'] as $questions)
-
-
-{{-- number is not an int therefore == and not === --}}
-{{-- parse? --}}
-
-@if ($questions['id'] == $number)
-{{
-    $questions['question']
-}}
-
-
+@foreach ($keys as $key)
+<div class="key">
+    {{$key}}
+    </div>
+    <input type="radio" id="{{$questionId}}{{$key}}" name="{{$inputId}}" value="{{$key}}">
+@endforeach
 @endif
+@endforeach
 
-{{-- {{
-    print_r($currentQuiz['answers'])
-}} --}}
+    </div>
 
+</div>
 
+<br>
 @endforeach
 
 
-@foreach ($currentQuiz['answers'] as $answers)
-    If url id matches answer id => display answers
-    @if ($answers['id'] == $number)
-
-    @php
-    // Fetch answer keys in array
-        $keys = array();
-        array_push($keys, key($answers['answer'][0]), key($answers['answer'][1]), key($answers['answer'][2]));
-    @endphp
-
-{{ print_r($keys)}}
-
-    @endif
-
-    {{-- se om du kan hitta och jämföra vilket answers answer som är rätt och bekräfta det --}}
-
-@endforeach
-
-{{-- user chooses between the different key values --}}
+<button type="submit"></button>
+</form>

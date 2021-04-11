@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ResultController;
 use App\Http\Controllers\QuizController;
 use Whoops\Run;
 
@@ -21,7 +22,7 @@ use Whoops\Run;
 
 Route::get('/', function () {
     return view('/index');
-});
+})->middleware('guest');
 Route::post('login', LoginController::class);
 Route::get('logout', LogoutController::class);
 Route::get('dashboard', DashboardController::class)->middleware('auth');
@@ -29,5 +30,5 @@ Route::post('register', RegisterController::class);
 Route::view('/register', 'authentication/register');
 
 Route::resource('test', QuizController::class);
-Route::get('quiz/{id}/{number}', 'App\Http\Controllers\QuizController@show');
-// Route::post('/result', 'PhpQuizController@store');
+Route::get('quiz/{id}', 'App\Http\Controllers\QuizController@show');
+Route::post('quiz/{id}/result', ResultController::class);
