@@ -7,6 +7,7 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ResultController;
 use App\Http\Controllers\QuizController;
+use App\Http\Controllers\UserScoresController;
 use Whoops\Run;
 
 /*
@@ -29,6 +30,8 @@ Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::post('register', RegisterController::class);
 Route::view('/register', 'authentication/register');
 
-Route::resource('test', QuizController::class);
 Route::get('quiz/{id}', 'App\Http\Controllers\QuizController@show');
-Route::post('quiz/{id}/result', ResultController::class);
+Route::post('quiz/{id}/result', ResultController::class)->middleware('auth');
+Route::get('history', UserScoresController::class)->middleware('auth');
+
+// Route::resource('test', QuizController::class);
