@@ -65,17 +65,17 @@ class Quiz
                     [
                         'id' => 4,
                         'answer' => [
-                            ['yes' => true],
                             ['HAHAHAHA' => false],
                             ['no' => false],
+                            ['yes' => true],
                         ]
                     ],
                     [
                         'id' => 5,
                         'answer' => [
-                            ['yes' => true],
                             ['maybe' => false],
                             ['no' => false],
+                            ['yes' => true],
                         ]
                     ],
 

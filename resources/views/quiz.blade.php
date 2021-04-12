@@ -17,7 +17,6 @@
 
 
 
-
 <form action="result" method="post">
 @csrf
 @foreach ($questions as $question)
@@ -28,19 +27,16 @@
         {{$question['question']}}
     </div>
     <div class="answers">
-
-
- @php
-     $questionId = $question['id'];
-
- @endphp
+        @php
+         $questionId = $question['id'];
+        @endphp
 
 @foreach ($quiz['answers'] as $answers)
 
 @if ($answers['id'] === $questionId)
 @php
 $number = (string)$answers['id'];
-$inputId = 'question' . $number;
+$inputId = 'answer' . $number;
 $keys = array();
 array_push($keys, key($answers['answer'][0]), key($answers['answer'][1]), key($answers['answer'][2]));
 @endphp
@@ -63,5 +59,5 @@ array_push($keys, key($answers['answer'][0]), key($answers['answer'][1]), key($a
 @endforeach
 
 
-<button type="submit"></button>
+<button type="submit">submit</button>
 </form>
