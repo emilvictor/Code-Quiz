@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 
 class UserScoresController extends Controller
@@ -18,10 +19,11 @@ class UserScoresController extends Controller
     public function __invoke(Request $request)
     {
 
-        $user = Auth::user();
 
+        $userId = auth()->user()->id;
 
+        $user = User::find($userId);
 
-        return view('/history', ['user_id' => $user]);
+        return view('history')->with('scores', $user->scores);
     }
 }

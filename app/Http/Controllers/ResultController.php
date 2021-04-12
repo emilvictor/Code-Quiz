@@ -25,9 +25,6 @@ class ResultController extends Controller
 
         $quiz = Quiz::all();
 
-        // $msg = $quiz->$id['answers'][1]['answer'][0][$request->answer1];
-
-
         $number = 1;
         $score = 0;
 
@@ -53,46 +50,13 @@ class ResultController extends Controller
             $number++;
         }
 
-        error_log($score);
-
-
-
         // Skicka in score i databas
-
-
 
         $userScore = new UserScores();
         $userScore->user_id = Auth::id();
         $userScore->quiz_id = $id;
         $userScore->score = $score;
-
         $userScore->save();
-
-        // dd($id);
-
-
-        // $user = UserScore::create([
-        //     "user_id" => Auth::id(),
-        //     "quiz_id" => $id,
-        //     "score" => $score,
-        // ]);
-
-
-        // $this->validate($request, [
-        //     'name' => 'required|string',
-        //     'image' => 'required|string',
-        // ]);
-
-        // $favorite = new Favorite();
-        // $favorite->user_id = Auth::id();
-        // $favorite->name = $request->input('name');
-        // $favorite->image = $request->input('image');
-        // $favorite->save();
-
-        // return back();
-
-
-        // Returnera på result/
 
         return view('/result')->with('quizid', $id)->with('request', $request);
     }
