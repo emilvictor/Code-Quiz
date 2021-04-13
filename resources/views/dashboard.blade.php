@@ -1,9 +1,6 @@
 @extends('/layouts/app')
 
-{{-- <h3>{{ $user->name }}</h3> --}}
 <h3>SELECT QUIZ</h3>
-
-
 
 <ul>
     <li><form action="quiz/php/">
@@ -21,8 +18,6 @@
 
 </ul>
 
-
-{{-- {{ die(var_dump($user)) }} --}}
 <div class="logout-history-box">
 
     <form action="/history" class="form-history">

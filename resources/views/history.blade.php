@@ -8,6 +8,6 @@
     <br>
     {{$score->quiz_id}}
     <br>
-
+    <span></span>
 @endforeach
 

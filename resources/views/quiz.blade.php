@@ -7,15 +7,11 @@
     @php
         array_push($questions, $question)
     @endphp
-
     @endforeach
-
 
 <h1>
 {{$id}}
 </h1>
-
-
 
 <form action="result" method="post">
 @csrf
@@ -50,14 +46,10 @@ array_push($keys, key($answers['answer'][0]), key($answers['answer'][1]), key($a
 @endforeach
 @endif
 @endforeach
-
     </div>
-
 </div>
-
 <br>
 @endforeach
-
 
 <button type="submit">submit</button>
 </form>
