@@ -55,6 +55,6 @@ class ResultController extends Controller
         $userScore->score = $score;
         $userScore->save();
 
-        return view('/result')->with('quizid', $id)->with('request', $request);
+        return view('/result')->with('quizid', $id)->with('score', $userScore);
     }
 }

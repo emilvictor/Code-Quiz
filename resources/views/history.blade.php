@@ -1,11 +1,17 @@
 @extends('/layouts/app')
-<h1>User history</h1>
+<section class="section-history">
+    <h1>History</h1>
 
+    @foreach ($scores as $score)
+    <div class="score-box">
+        {{$score->created_at}}
+        {{$score->quiz_id . ': ' }}
+        {{$score->score. '/' . 5 . 'p'}}
+    </div>
+    @endforeach
 
-
-@foreach ($scores as $score)
-{{$score->score}}
-<br>
-{{$score->quiz_id}}
-<br>
-@endforeach
+    <div class="links">
+        <a href="/dashboard">dashboard</a>
+        <a href="/logout">logout</a>
+    </div>
+</section>

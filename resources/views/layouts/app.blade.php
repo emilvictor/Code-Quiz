@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +13,10 @@
 
     <title>Code-quiz</title>
 </head>
-<body>
-      @yield('body')
 
-      <footer>
-          <span class="footer-line"></span>
-      </footer>
+<body>
+    @yield('body')
+
 </body>
+
 </html>

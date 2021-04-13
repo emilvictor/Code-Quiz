@@ -1,16 +1,22 @@
 @extends('/layouts/app')
 
-<h1>CODE QUIZ</h1>
+<section class="section-index">
+    <h1>CODE QUIZ</h1>
+    <form action="/login" method="post" class="login-form">
+        @csrf
+        <div class="form-group email">
+            <label for="email">Email</label>
+            <input name="email" id="email" type="email" placeholder="exampel@gmail.com" />
+        </div>
 
-<form action="/login" method="post" class="login-form">
-    @csrf
-    <label for="email">Email</label>
-    <input name="email" id="email" type="email" placeholder="exampel@gmail.com" />
-    <label for="password">Password</label>
-    <input name="password" id="password" type="password" placeholder="******" />
-    <button type="submit" class="btn-login">Login</button>
-</form>
+        <div class="form-group password">
 
-<p><a href="register">create user</a></p>
+            <label for="password">Password</label>
+            <input name="password" id="password" type="password" placeholder="******" />
 
-@include('errors')
+        </div>
+        <button type="submit" class="btn-login">Login</button>
+    </form>
+    <p><a href="register">create user</a></p>
+    @include('errors')
+</section>

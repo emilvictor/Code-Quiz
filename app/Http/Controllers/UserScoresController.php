@@ -20,7 +20,6 @@ class UserScoresController extends Controller
         $userId = auth()->user()->id;
 
         $user = User::find($userId);
-
         return view('history')->with('scores', $user->scores);
     }
 }
