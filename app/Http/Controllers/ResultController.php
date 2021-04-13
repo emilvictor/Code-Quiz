@@ -49,7 +49,6 @@ class ResultController extends Controller
         }
 
         // Skicka in score i databas
-
         $userScore = new UserScores();
         $userScore->user_id = Auth::id();
         $userScore->quiz_id = $id;

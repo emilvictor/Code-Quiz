@@ -4,10 +4,8 @@
 
 
 @foreach ($scores as $score)
-    {{$score->score}}
-    <br>
-    {{$score->quiz_id}}
-    <br>
-    <span></span>
+{{$score->score}}
+<br>
+{{$score->quiz_id}}
+<br>
 @endforeach
-
