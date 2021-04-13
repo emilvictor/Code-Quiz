@@ -7,14 +7,12 @@ use Illuminate\Support\Facades\Auth;
 use App\Quiz;
 use App\Models\UserScores;
 
-
 class ResultController extends Controller
 {
     //
 
     public function __invoke(Request $request, $id)
     {
-
         $this->validate($request, [
             'answer1' => 'required|string',
             'answer2' => 'required|string',
