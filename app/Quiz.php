@@ -6,7 +6,6 @@ namespace App;
 
 use function PHPUnit\Framework\isFalse;
 
-
 class Quiz
 {
     public static function all(): object

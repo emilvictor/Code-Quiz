@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
-
 class UserScoresController extends Controller
 {
     /**
@@ -18,8 +17,6 @@ class UserScoresController extends Controller
     //
     public function __invoke(Request $request)
     {
-
-
         $userId = auth()->user()->id;
 
         $user = User::find($userId);
