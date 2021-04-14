@@ -61,4 +61,5 @@ $questions = [];
 
         <button type="submit">submit</button>
     </form>
+    @include('errors')
 </section>

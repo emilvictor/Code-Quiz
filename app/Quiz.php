@@ -17,23 +17,23 @@ class Quiz
                 'questions' => [
                     [
                         'id' => 1,
-                        'question' => 'is this the first javascript q?',
+                        'question' => 'Is this a javascript q?',
                     ],
                     [
                         'id' => 2,
-                        'question' => 'is this the SECOND javascript q?',
+                        'question' => 'Is this a javascript q?',
                     ],
                     [
                         'id' => 3,
-                        'question' => 'is this the THIRD javascript q?',
+                        'question' => 'Is this a javascript q?',
                     ],
                     [
                         'id' => 4,
-                        'question' => 'is this the FOURTH javascript q?',
+                        'question' => 'Is this a  javascript q?',
                     ],
                     [
                         'id' => 5,
-                        'question' => 'is this the FIFTH AND LAST javascript q?',
+                        'question' => 'Is this the last javascript q?',
                     ]
                 ],
                 'answers' => [
@@ -64,9 +64,9 @@ class Quiz
                     [
                         'id' => 4,
                         'answer' => [
-                            ['HAHAHAHA' => false],
-                            ['no' => false],
-                            ['yes' => true],
+                            ['yes' => false],
+                            ['maybe' => false],
+                            ['no' => true],
                         ]
                     ],
                     [
@@ -87,23 +87,23 @@ class Quiz
                 'questions' => [
                     [
                         'id' => 1,
-                        'question' => 'is this the first php q?',
+                        'question' => 'Is this a php q?',
                     ],
                     [
                         'id' => 2,
-                        'question' => 'is this the SECOND javascript q?',
+                        'question' => 'Is this a php q?',
                     ],
                     [
                         'id' => 3,
-                        'question' => 'is this the THIRD javascript q?',
+                        'question' => 'Is this a php q?',
                     ],
                     [
                         'id' => 4,
-                        'question' => 'is this the FOURTH javascript q?',
+                        'question' => 'Is this a php q?',
                     ],
                     [
                         'id' => 5,
-                        'question' => 'is this the FIFTH AND LAST javascript q?',
+                        'question' => 'Is this the last php q?',
                     ]
                 ],
                 'answers' => [
@@ -134,17 +134,17 @@ class Quiz
                     [
                         'id' => 4,
                         'answer' => [
-                            ['HAHAHAHA' => false],
-                            ['no' => false],
                             ['yes' => true],
+                            ['maybe' => false],
+                            ['no' => false],
                         ]
                     ],
                     [
                         'id' => 5,
                         'answer' => [
+                            ['yes' => true],
                             ['maybe' => false],
                             ['no' => false],
-                            ['yes' => true],
                         ]
                     ],
 
@@ -157,23 +157,23 @@ class Quiz
                 'questions' => [
                     [
                         'id' => 1,
-                        'question' => 'is this the first javascript q?',
+                        'question' => 'Is this an sql q?',
                     ],
                     [
                         'id' => 2,
-                        'question' => 'is this the SECOND javascript q?',
+                        'question' => 'Is this an sql q?',
                     ],
                     [
                         'id' => 3,
-                        'question' => 'is this the THIRD javascript q?',
+                        'question' => 'Is this an sql q?',
                     ],
                     [
                         'id' => 4,
-                        'question' => 'is this the FOURTH javascript q?',
+                        'question' => 'Is this an sql q?',
                     ],
                     [
                         'id' => 5,
-                        'question' => 'is this the FIFTH AND LAST javascript q?',
+                        'question' => 'Is this an sql q?',
                     ]
                 ],
                 'answers' => [
@@ -204,17 +204,17 @@ class Quiz
                     [
                         'id' => 4,
                         'answer' => [
-                            ['HAHAHAHA' => false],
-                            ['no' => false],
                             ['yes' => true],
+                            ['maybe' => false],
+                            ['no' => false],
                         ]
                     ],
                     [
                         'id' => 5,
                         'answer' => [
+                            ['yes' => true],
                             ['maybe' => false],
                             ['no' => false],
-                            ['yes' => true],
                         ]
                     ],
 
@@ -227,23 +227,23 @@ class Quiz
                 'questions' => [
                     [
                         'id' => 1,
-                        'question' => 'is this the first javascript q?',
+                        'question' => 'Is this a laravel q?',
                     ],
                     [
                         'id' => 2,
-                        'question' => 'is this the SECOND javascript q?',
+                        'question' => 'Is this a laravel q?',
                     ],
                     [
                         'id' => 3,
-                        'question' => 'is this the THIRD javascript q?',
+                        'question' => 'Is this a laravel q?',
                     ],
                     [
                         'id' => 4,
-                        'question' => 'is this the FOURTH javascript q?',
+                        'question' => 'Is this a laravel q?',
                     ],
                     [
                         'id' => 5,
-                        'question' => 'is this the FIFTH AND LAST javascript q?',
+                        'question' => 'Is this the last laravel q?',
                     ]
                 ],
                 'answers' => [
@@ -274,17 +274,17 @@ class Quiz
                     [
                         'id' => 4,
                         'answer' => [
-                            ['HAHAHAHA' => false],
-                            ['no' => false],
                             ['yes' => true],
+                            ['maybe' => false],
+                            ['no' => false],
                         ]
                     ],
                     [
                         'id' => 5,
                         'answer' => [
+                            ['yes' => true],
                             ['maybe' => false],
                             ['no' => false],
-                            ['yes' => true],
                         ]
                     ],
 

@@ -5,7 +5,7 @@
         {{$quizid}}
     </h1>
     <h2>
-        {{$score->score . '/' . 5}}
+        {{$score->score . '/' . '5p'}}
     </h2>
     <a href="/dashboard">dashboard</a>
     <a href="/history">history</a>
