@@ -6,21 +6,25 @@
     <ul>
         <li>
             <form action="quiz/php/">
+                @csrf
                 <button type="submit" class="btn-quiz php">> php</button>
             </form>
         </li>
         <li>
             <form action="quiz/javascript/">
+                @csrf
                 <button type="submit" class="btn-quiz js">> js</button>
             </form>
         </li>
         <li>
             <form action="quiz/laravel/">
+                @csrf
                 <button type="submit" class="btn-quiz laravel">> laravel</button>
             </form>
         </li>
         <li>
             <form action="quiz/sql/">
+                @csrf
                 <button type="submit" class="btn-quiz sql">> sql</button>
             </form>
         </li>
