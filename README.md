@@ -1,14 +1,14 @@
 
-### Installation
+## Installation
 
 - Clone repo
 
-# in root folder
+### in root folder
 - rename .env.example to .env 
 - DB_PASSWORD:your_password
 
 
-# in terminal run
+### in terminal run
 - composer install
 - npm install
 - php artisan key:generate
