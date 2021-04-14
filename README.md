@@ -1,3 +1,6 @@
+## Description
+
+Simple quiz made in laravel
 
 ## Installation
 
@@ -40,4 +43,11 @@
 - Make sure to also send some errors when the user didnt meet the criteria for creating a new account
 - `RegisterController` you could use the `Auth()` facade. Even though it works right now, the `login` method appears marked as `undefined method` by VSCode
 - `UserScores.php:14` you could change that line to `return $this->belongsTo(User::class);` works the same but its clearer that you are referencing the User model.
+
+## Backlog
+
+- Elaborate testing
+- Actually write a quiz(?)
+- Write a backlog
+
 
